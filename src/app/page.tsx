@@ -30,7 +30,7 @@ export default function LandingPage() {
                 </div>
             </header>
 
-            <main>
+            <main className="animate-fade-in">
                 <section className="py-10 md:py-18">
                     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                         <div className="flex flex-col lg:flex-row items-center gap-12">
@@ -74,8 +74,6 @@ export default function LandingPage() {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-primary/20 rounded-full blur-3xl -z-10"></div>
-                                <div className="absolute -top-6 -left-6 w-48 h-48 bg-primary/10 rounded-full blur-3xl -z-10"></div>
                             </div>
                         </div>
                     </div>

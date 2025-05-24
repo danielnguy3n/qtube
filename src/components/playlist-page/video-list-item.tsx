@@ -163,8 +163,6 @@ const BaseVideoListItem = forwardRef<HTMLDivElement, VideoListItemProps>(({ vide
                     <div className="pr-6">
                         <div className="flex gap-4 items-baseline">
                             <h4 className="font-medium line-clamp-2 text-sm">{video.itemName}</h4>
-                            <br />
-                            <h4 className="font-medium line-clamp-2 text-sm">Active: {activeVideo?.itemName}</h4>
                             <Button
                                 size="icon"
                                 variant="ghost"
