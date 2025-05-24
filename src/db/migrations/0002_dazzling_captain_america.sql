@@ -1,0 +1,1 @@
+ALTER TABLE "playlist_items" ADD COLUMN "thumbnail_url" varchar;

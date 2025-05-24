@@ -1,0 +1,68 @@
+What did you learn?
+
+1. Loading states
+    - Loading.tsx is a loader for the whole page
+    - Suspense is used for components. Think more fine tuned loading states. It will use the fallback if the wrapped component is async
+    - If you need client side loading state (i.e. when clicking), have a loading state
+
+2. Project folder name needs to be same and lower case to name in package.json i Think
+
+3. Authentication
+    - use the callbacks property to access the jwt info (i.e. access token) and session info
+    - JWT stands for JSON Web token.
+        - Stores info and is used to transmit data between two parties
+        - Usually attached to http requests
+        - Signed using a secret key
+        - Flow
+            1. User signs in and server verifies identity
+            2. Server generates JSON Web Token. It contains info about user and is signed with a secret key
+            3. JSON Web Token is sent to client usually as a cookie
+            4. Client will sent JSON Web Token with requests
+            5. Server verifies JWT to validate signature and amke sure its not expired
+        - In NextAuth
+            1. User signs in with Google
+            2. NextAuth receives account + profile info from Google
+            3. jwt() callback is called and you can put extra things inside it
+            4. JWT is encrypted and stored client-side
+            5. Calling getServerSession() or useSession will decrypt cookie, validate JSON Web Token and provide info
+            6. User stays logged in.
+        - Refresh token
+            - Use the refresh token as part of a URLSearchParam to hit an endpoint usually oauth2 endpoint depending on provider
+            - POST endpoint will return a new access token which you can then use on youtube api
+        - Make cast JWT type on token when first logging in. 
+
+4. Passing props 
+    - you can use this pattern 
+    - PROPS: content: (() => React.ReactNode) | React.ReactNode
+    - typeof content === "function" ? content() : <p className="font-bold">{content}</p>
+
+5. Rerendering issues w drag and drop
+    - Main problems inside the video list item
+    - By disabling the dropdown menu and sliders you noticed that the dnd was smoother
+    - Wrap those components inside React.memo -> performance increase
+
+6. Debouncing in React
+    - https://www.developerway.com/posts/debouncing-in-react
+
+7. Dnd interactions w dropdown menu
+    - also https://codesandbox.io/p/sandbox/react-typescript-with-dnd-kit-sortable-qk4y7x?file=%2Fsrc%2FApp.tsx 
+    - set activation constraint
+
+8. Extract variants of button
+    - VariantProps<typeof buttonVariants>["variant"]
+    - Look at the actual button implementation you can find  VariantProps<typeof buttonVariants> there
+    - then ["variant"] to extract variants
+
+9. Syncing server info with client components   
+    - using videos as initial state for items inside videoList component
+    - useEffect to sync
+    - A re-render does not reset local state unless you explicitly tell it to.
+    - The Input fields are bound to time state: ❌ they’re showing the stale state that only updates on user input or setTime. whereas the slider is bound to value directly
+
+10. Annoying bug where onStateChange handler triggers twice
+    - implement ref flag
+
+11. Use middleware to redirect into different routes
+    - request parse through middleware function based on routes in the matcher. 
+    - they are parsed through after request but before page is rendered so you can redirect based on Authentication
+    = 
