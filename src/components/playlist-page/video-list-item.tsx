@@ -158,7 +158,7 @@ const BaseVideoListItem = forwardRef<HTMLDivElement, VideoListItemProps>(({ vide
                 <div className="absolute bottom-1 right-1 bg-black/80 text-white text-xs px-1 rounded">{convertDurationToString(video.duration)}</div>
             </Button>
 
-            <div className="flex-1 min-w-0 py-2">
+            <div className="flex-1 min-w-0 py-2 relative">
                 <div className="flex justify-between items-start">
                     <div className="pr-6">
                         <div className="flex gap-4 items-baseline">
@@ -178,7 +178,7 @@ const BaseVideoListItem = forwardRef<HTMLDivElement, VideoListItemProps>(({ vide
                         </p>
                     </div>
 
-                    <div className="flex gap-2 items-center">
+                    <div className="flex gap-2 items-center absolute top-0 right-1">
                         <VideoListItemDropdown
                             url={constructYoutubeUrlWithTimestamp(video)}
                             handleDuplicate={handleDuplicate}

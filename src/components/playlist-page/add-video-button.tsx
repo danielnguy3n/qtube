@@ -201,7 +201,7 @@ export const AddVideoInputForm = () => {
                             <Button
                                 className="self-end"
                                 type="submit"
-                                disabled={!isValid}
+                                disabled={!isValid || Boolean(error)}
                             >
                                 Add
                             </Button>

@@ -36,8 +36,12 @@ export default function useYoutubeVideo(videoId: string | null): UseYoutubeVideo
                 setData(data.items[0])
                 setError(null)
             })
-            .catch(() => {
-                setError("Failed to fetch video")
+            .catch((e) => {
+                if (e.code === 403) {
+                    setError("“We couldn't access your YouTube data. Please make sure you've signed in to YouTube at least once.")
+                } else {
+                    setError("Failed to fetch video")
+                }
                 setData(null)
             })
             .finally(() => {
