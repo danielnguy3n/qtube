@@ -1,6 +1,19 @@
 # QTube — Curate Custom YouTube Playlists with Timestamps
 
 QTube is a project built that allows users to create custom YouTube playlists with precise start and end timestamps for each video segment. It integrates with Google and YouTube APIs using OAuth2 authorization, making it easy to search, authenticate, and manage video content securely.
+ 
+## Testing
+QTube uses sensitive scopes from the Google and YouTube APIs (e.g. for accessing user data and managing YouTube content). It has not yet been submitted for OAuth verification, which means users cannot sign in with their own Google accounts at this stage.
+
+For testing purposes, only whitelisted test accounts can authenticate and use the full functionality of the app. If you're reviewing or testing the project, please use the test credentials provided or contact the developer for access.
+
+Steps to sign in
+- Click "Sign in with Google" on the homepage.
+- When prompted, select "Use another account".
+- Enter the following test credentials:
+    - Email: qtube.testing@gmail.com
+    - Password: qtube123testing!
+- Proceed through any additional prompts to complete the sign-in process.
 
 ## Features
 
@@ -29,17 +42,5 @@ QTube is a project built that allows users to create custom YouTube playlists wi
 - **Google APIs**:  
   - YouTube Data API v3 for video details and search.  
   - OAuth2 for authentication and access token management.
- 
-## Testing
-QTube uses sensitive scopes from the Google and YouTube APIs (e.g. for accessing user data and managing YouTube content). It has not yet been submitted for OAuth verification, which means users cannot sign in with their own Google accounts at this stage.
 
-For testing purposes, only whitelisted test accounts can authenticate and use the full functionality of the app. If you're reviewing or testing the project, please use the test credentials provided or contact the developer for access.
-
-Steps to sign in
-- Click "Sign in with Google" on the homepage.
-- When prompted, select "Use another account".
-- Enter the following test credentials:
-    - Email: qtube.testing@gmail.com
-    - Password: qtube123testing!
-- Proceed through any additional prompts to complete the sign-in process.
 
