@@ -39,7 +39,7 @@ Steps to sign in
 - Click "Sign in with Google" on the homepage.
 - When prompted, select "Use another account".
 - Enter the following test credentials:
-  Email: qtube.testing@gmail.com
-  Password: qtube123testing!
+    - Email: qtube.testing@gmail.com
+    - Password: qtube123testing!
 - Proceed through any additional prompts to complete the sign-in process.
 
