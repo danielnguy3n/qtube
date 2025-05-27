@@ -1,36 +1,31 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# QTube — Curate Custom YouTube Playlists with Timestamps
 
-## Getting Started
+QTube is a project built that allows users to create custom YouTube playlists with precise start and end timestamps for each video segment. It integrates with Google and YouTube APIs using OAuth2 authorization, making it easy to search, authenticate, and manage video content securely.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Google Sign-In with OAuth2**  
+  Secure user authentication using Google accounts to access YouTube content via access tokens.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Search and Import YouTube Videos**  
+  Use YouTube Data API to search and select videos to add to your custom playlists.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Create Timestamped Playlists**  
+  Curate video playlists by selecting specific time ranges from each video, ideal for highlights, tutorials, or focused content viewing.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Persistent Playlist Management**  
+  Save, update, and organize your playlists using a clean, database-backed UI.
 
-## Learn More
+- **Drag and Drop Reordering**  
+  Reorder videos in your playlist seamlessly using [Dnd Kit](https://dndkit.com/).
 
-To learn more about Next.js, take a look at the following resources:
+## Tech Stack
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Framework**: [Next.js 15](https://nextjs.org/) with the App Router for server components and dynamic routing.
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/) for utility-first styling.
+- **UI Components**: [shadcn/ui](https://ui.shadcn.dev/) for clean, accessible components.
+- **State & DB**: [Drizzle ORM](https://orm.drizzle.team/) for type-safe and modern database interactions.
+- **Drag & Drop**: [Dnd Kit](https://dndkit.com/) for interactive drag-and-drop capabilities.
+- **Google APIs**:  
+  - YouTube Data API v3 for video details and search.  
+  - OAuth2 for authentication and access token management.
